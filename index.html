@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration Form + Table</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <!-- Hamburger menu button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <!-- Registration Card -->
+          <div class="card shadow-sm p-4 mb-5">
+            <h3 class="mb-4 text-center">Registration Form</h3>
+
+            <form
+              class="row g-3 needs-validation"
+              novalidate
+              onsubmit="if(!this.checkValidity()){event.preventDefault();event.stopPropagation();} this.classList.add('was-validated');"
+            >
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter your first name.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  required
+                />
+                <div class="invalid-feedback">Please enter your last name.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+                <div class="invalid-feedback">A valid email is required.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  required
+                />
+                <div class="invalid-feedback">Please enter a password.</div>
+              </div>
+
+              <div class="col-12 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="terms"
+                  required
+                />
+                <label class="form-check-label" for="terms">
+                  I agree to the terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-success w-100" type="submit">
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Simulated Data Table -->
+          <div class="card shadow-sm p-4">
+            <h4 class="mb-3">Simulated User Submissions</h4>
+
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ben</td>
+                    <td>Johnson</td>
+                    <td>Ben.Johnson@example.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Caleb</td>
+                    <td>Williams</td>
+                    <td>Caleb.Williams@example.com</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>DJ</td>
+                    <td>Moore</td>
+                    <td>DJ.Moore@example.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Image Section -->
+          <div class="container-fluid mt-5 bg-light py-5 text-center">
+            <!-- Main responsive image -->
+            <img
+              src="https://placehold.co/600x400"
+              class="img-fluid mb-4"
+              alt="Main Image"
+            />
+
+            <!-- Circular image -->
+            <img
+              src="https://placehold.co/350x350"
+              class="rounded-circle mb-4"
+              alt="Circular Image"
+            />
+
+            <!-- Buttons -->
+            <div>
+              <button class="btn btn-primary me-2">
+                Visible on All Screens
+              </button>
+              <button class="btn btn-secondary d-none d-md-inline-block">
+                Hidden on Small Screens
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
